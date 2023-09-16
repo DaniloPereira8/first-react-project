@@ -99,3 +99,35 @@ gap:20px;
          }
 }
 `;
+
+export const User = styled.li`
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin-top:20px;
+
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+background: rgba(255, 255, 255, 0.25);
+border-radius: 14px;
+
+width: 342px;
+height: 58px;
+
+border: none;
+outline: none;
+
+p{
+font-size: 18px;
+font-weight: 700;
+line-height: 22px;
+letter-spacing: -0.40799999237060547px;
+color: rgba(238, 238, 238, 1);
+}
+
+button{
+   background: none;
+   border:none;
+   cursor: pointer;
+}
+
+`;
