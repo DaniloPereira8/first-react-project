@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import People from './assets/people.svg';
 import seta from './assets/arrowD.svg';
 import Trash from './assets/trash.svg'
@@ -15,10 +15,13 @@ import {
 function App() {
   
   const [users, setUsers] = useState([]);
+  const inputName = useRef()
+  const inputAge = useRef()
 
   function addNewUser(){
-    setUsers ([{id: Math.random(), name: 'Danilo', age: 27}])
+    setUsers ([...users, {id: Math.random(), name:inputName.current.value, age: inputAge.current.value }])
   }
+
   // const [users, setUsers] = useState([]);
 
 
@@ -26,6 +29,10 @@ function App() {
 
   // }
 
+  function deleteUser(UserId) {
+    const  newUser = users.filter (user => user.id !== UserId) ;
+    setUsers (newUser)
+  }
   
   return <Container>
     <Image alt = "people-image" src = {People}/>
@@ -34,10 +41,10 @@ function App() {
   <H1>Olá</H1>
   
   <InputLabel>Nome</InputLabel>
-  <Input placeholder="Nome"/>
+  <Input ref={inputName} placeholder="Nome"/>
 
   <InputLabel>Idade</InputLabel>
-  <Input placeholder="Idade"/>
+  <Input ref={inputAge} placeholder="Idade"/>
 
 <Button onClick={addNewUser}>Cadastrar <img alt = 'seta' src= {seta} /></Button>
 
@@ -45,7 +52,7 @@ function App() {
   {users.map((user) => (
     <User key = {user.id}>
     <p> {user.name}</p> <p>{user.age} </p>
-    <button><img src = {Trash} alt = 'lata de lixo' /></button>
+    <button onClick={ () =>  deleteUser(user.id)}><img src = {Trash} alt = 'lata de lixo' /></button>
     </User>
   ))}
 </ul>
