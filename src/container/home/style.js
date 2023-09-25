@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import background from './assets/background1.svg'
+import {Link} from 'react-router-dom';
+
+import background from '../../assets/background1.svg'
 
 export const Container = styled.div`
 
@@ -70,7 +72,7 @@ color: rgba(255, 255, 255, 1);
 
 `;
 
-export const Button = styled.button`
+export const Button = styled(Link)`
 
 width: 342px;
 height: 74px;
@@ -87,6 +89,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 gap:20px;
+margin-top: 100px;
 
 &:hover{
     background: linear-gradient(  157.44deg,
@@ -98,36 +101,4 @@ gap:20px;
             opacity: 0.5;
          }
 }
-`;
-
-export const User = styled.li`
-display: flex;
-justify-content: space-around;
-align-items: center;
-margin-top:20px;
-
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-background: rgba(255, 255, 255, 0.25);
-border-radius: 14px;
-
-width: 342px;
-height: 58px;
-
-border: none;
-outline: none;
-
-p{
-font-size: 18px;
-font-weight: 700;
-line-height: 22px;
-letter-spacing: -0.40799999237060547px;
-color: rgba(238, 238, 238, 1);
-}
-
-button{
-   background: none;
-   border:none;
-   cursor: pointer;
-}
-
 `;
