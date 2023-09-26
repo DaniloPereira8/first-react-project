@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
-
 import background from '../../assets/background1.svg'
 
 export const Container = styled.div`
@@ -72,7 +70,7 @@ color: rgba(255, 255, 255, 1);
 
 `;
 
-export const Button = styled(Link)`
+export const Button = styled.button`
 
 width: 342px;
 height: 74px;

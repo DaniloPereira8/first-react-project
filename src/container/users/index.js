@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import axios from 'axios'
 
+import {useHistory} from 'react-router-dom';
 import Avatar from '../../assets/avatar.svg';
 import seta from '../../assets/arrowS.svg';
 import Trash from '../../assets/trash.svg'
@@ -15,7 +16,9 @@ import {
 } from './style';
 
 function Users() {
-  
+
+  const history = useHistory();
+
   const [users, setUsers] = useState([]);
 
 
@@ -36,6 +39,10 @@ function Users() {
     const  newUser = users.filter (user => user.id !== UserId) ;
     setUsers (newUser)
   }
+
+  function goBackPage(){
+    history.push('/');
+  }
   
   return <Container>
     <Image alt = "people-image" src = {Avatar}/>
@@ -52,7 +59,7 @@ function Users() {
   ))}
 </ul>
 
-<Button to='/' > <img alt = 'seta' src= {seta} /> Voltar</Button>
+<Button onClick={goBackPage} > <img alt = 'seta' src= {seta} /> Voltar</Button>
 
 
   </ContainerItens>
