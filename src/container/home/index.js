@@ -5,10 +5,12 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import People from '../../assets/people.svg';
 import seta from '../../assets/arrowD.svg';
 
+import H1 from './../../components/Title'
+import ContainerItens from './../../components/componentsitens'
+
+
 import {
-  Container,
-  H1, Image,
-  ContainerItens,
+  Container, Image,
   InputLabel, Input,
   Button,
 } from './style';
@@ -50,7 +52,7 @@ history.push('/usuarios')
 <Button onClick={addNewUser}>Cadastrar <img alt = 'seta' src= {seta} /></Button>
 
   </ContainerItens>
-  </Container>
+  </Container> 
 }
 
 export default App;

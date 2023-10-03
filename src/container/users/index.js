@@ -7,10 +7,11 @@ import Avatar from '../../assets/avatar.svg';
 import seta from '../../assets/arrowS.svg';
 import Trash from '../../assets/trash.svg'
 
+import H1 from '../../components/Title'
+import ContainerItens from "../../components/componentsitens";
+
 import {
-  Container,
-  H1, Image,
-  ContainerItens,
+  Container, Image,
   Button,
   User,
 } from './style';
@@ -47,7 +48,7 @@ function Users() {
   return <Container>
     <Image alt = "people-image" src = {Avatar}/>
 
-  <ContainerItens>
+  <ContainerItens isBlur={true}>
   <H1>Usuários</H1>
 
 <ul>
