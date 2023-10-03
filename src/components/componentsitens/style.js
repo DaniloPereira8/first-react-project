@@ -10,19 +10,21 @@ background: linear-gradient(
 );
 
 border-radius: 61px 61px 0px 0px;
+color: #ffffff;
 padding: 50px 36px;
 display: flex;
 flex-direction: column;
-height: 100vh;
+height: 100%;
 
 
 ${props => props.isBlur && `
 
 backdrop-filter: blur(45px);
-min-heght: calc(100vh - 170px );
+min-height: calc(100vh - 160px);
 
 
 `}
+
 
 `;
 
