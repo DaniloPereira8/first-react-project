@@ -8,11 +8,12 @@ import seta from '../../assets/arrowD.svg';
 import H1 from './../../components/Title'
 import ContainerItens from './../../components/componentsitens'
 
+import Button from '../../components/Button'
+
 
 import {
   Container, Image,
   InputLabel, Input,
-  Button,
 } from './style';
 
 function App() {

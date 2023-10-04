@@ -10,9 +10,10 @@ import Trash from '../../assets/trash.svg'
 import H1 from '../../components/Title'
 import ContainerItens from "../../components/componentsitens";
 
+import Button from '../../components/Button'
+
 import {
   Container, Image,
-  Button,
   User,
 } from './style';
 
@@ -60,7 +61,7 @@ function Users() {
   ))}
 </ul>
 
-<Button onClick={goBackPage} > <img alt = 'seta' src= {seta} /> Voltar</Button>
+<Button isBack={true} onClick={goBackPage} > <img alt = 'seta' src= {seta} /> Voltar</Button>
 
 
   </ContainerItens>

@@ -42,34 +42,3 @@ color: rgba(255, 255, 255, 1);
 
 
 `;
-
-export const Button = styled.button`
-
-width: 342px;
-height: 74px;
-border-radius: 14px;
-border: none;
-cursor: pointer;
-font-size: 17px;
-font-weight: 700;
-line-height: 28px;
-letter-spacing: 0px;
-background: rgba(0, 0, 0, 0.8);
-color: #ffffff;
-display: flex;
-align-items: center;
-justify-content: center;
-gap:20px;
-margin-top: 100px;
-
-&:hover{
-    background: linear-gradient(  157.44deg,
-         rgba(255, 255, 255, 0.6) 0.84%,
-         rgba(255, 255, 255, 0.6) 0.85%,
-         rgba(255, 255, 255, 0.15) 100% );
-
-         &:active{
-            opacity: 0.5;
-         }
-}
-`;
